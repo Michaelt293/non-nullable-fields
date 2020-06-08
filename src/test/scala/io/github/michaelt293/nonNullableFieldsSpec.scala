@@ -93,7 +93,7 @@ class nonNullableFieldsSpec extends AnyFlatSpec with Matchers with TryValues {
     "5 */50621".clean shouldEqual "550621"
   }
 
-  it should "not remove methods or alter from companion object" in {
+  it should "not remove or alter methods from companion object" in {
     val result = Companion.Person.make("Bigfoot", 349)
     val expected = Some(Companion.Person("Bigfoot", 349, None))
 
