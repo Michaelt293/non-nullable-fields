@@ -6,9 +6,17 @@ This library adds `null`-check assertions to class definitions to ensure that cl
 
 Add the following to to your `build.sbt` file -
 
+```scala
+libraryDependencies += "io.github.michaelt293" %% "non-nullable-fields" % "0.1"
 ```
-libraryDependencies += "io.github.michaelt293" % "non-nullable-fields_$scalaVersion" % "0.1.0"
+
+For scala versions 2.11 and 2.12, enable the macro paradise compiler plug-in -
+
+```scala
+addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
 ```
+
+For scala 2.13, use the `-Ymacro-annotations` compiler flag.
 
 ## Example usage
 
